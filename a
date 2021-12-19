@@ -1,0 +1,28 @@
+public class Main {
+
+    public static void main(String[] args) {
+        try {
+            File file = new File("in.txt");
+            BufferedReader reader = new BufferedReader(new FileReader(file));
+            String[] numbers = reader.readLine().split(" ");
+            reader.close();
+            BufferedWriter writer = new BufferedWriter(new FileWriter("out.txt"));
+            int sum = 0;
+            for (int i = 1; i < numbers.length; i++) {
+                int number = Integer.parseInt(numbers[i]);
+                if (number % 2 == 0) {
+                    sum += number;
+                    writer.write(numbers[i] + " ");
+                }
+            }
+            writer.write(Integer.toString(sum));
+            writer.close();
+        } catch (FileNotFoundException exception) {
+            exception.printStackTrace();
+            System.out.println("Файл не найден: " + exception.toString());
+        } catch (IOException exception) {
+            exception.printStackTrace();
+            System.out.println("Ошибка чтения / записи: " + exception.toString());
+        }
+    }
+}
