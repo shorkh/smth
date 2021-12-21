@@ -1,3 +1,4 @@
+//1 задание
 static class Student {
         public String name;
         public int grade;
@@ -22,3 +23,18 @@ static class Student {
         }
     }
 }
+
+//2 задание
+public void getTeacher(String fio){
+        class FIOSplitter {
+            final String name;
+            public FIOSplitter (String name){
+                this.name = name;
+            }
+            String produce() {
+                String[] nameParts = name.split(" ");
+                return "Ф: " + nameParts[0] + "И: " + nameParts[1] + "О: " + nameParts[2];
+            }
+        }
+        System.out.print(new FIOSplitter(fullName).produce());
+    }
