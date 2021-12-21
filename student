@@ -1,0 +1,24 @@
+static class Student {
+        public String name;
+        public int grade;
+        public Parent parent;
+
+        public Student (String name, int grade, String parentName, String parentPhoneNumber) {
+            this.name = name;
+            this.grade = grade;
+            this.parent = new Parent(parentName, parentPhoneNumber);
+        }
+
+        public Student (String name, int grade, Parent parent) {
+            this(name, grade, parent.pName, parent.PhoneNumber);
+        }
+        public static class Parent {
+            String pName;
+            String PhoneNumber;
+            public Parent (String pName, String PhoneNumber){
+                this.pName = pName;
+                this.PhoneNumber = PhoneNumber;
+            }
+        }
+    }
+}
