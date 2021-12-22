@@ -25,16 +25,16 @@ static class Student {
 }
 
 //2 задание
-public void getTeacher(String fio){
-        class FIOSplitter {
-            final String name;
-            public FIOSplitter (String name){
-                this.name = name;
+    public void getTeacher(String fio){
+        class Person {
+            final String fio;
+            public Person (String fio) {
+                this.fio = fio;
             }
-            String produce() {
-                String[] nameParts = name.split(" ");
-                return "Ф: " + nameParts[0] + "И: " + nameParts[1] + "О: " + nameParts[2];
+            String output() {
+                String[] name = fio.split(" ");
+                return "Ф: " + name[0] + "И: " + name[1] + "О: " + name[2];
             }
         }
-        System.out.print(new FIOSplitter(fullName).produce());
+        System.out.print(new Person(fio).output());
     }
