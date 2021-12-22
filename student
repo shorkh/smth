@@ -1,0 +1,40 @@
+//1 задание
+static class Student {
+        public String name;
+        public int grade;
+        public Parent parent;
+
+        public Student (String name, int grade, String parentName, String parentPhoneNumber) {
+            this.name = name;
+            this.grade = grade;
+            this.parent = new Parent(parentName, parentPhoneNumber);
+        }
+
+        public Student (String name, int grade, Parent parent) {
+            this(name, grade, parent.pName, parent.PhoneNumber);
+        }
+        public static class Parent {
+            String pName;
+            String PhoneNumber;
+            public Parent (String pName, String PhoneNumber){
+                this.pName = pName;
+                this.PhoneNumber = PhoneNumber;
+            }
+        }
+    }
+}
+
+//2 задание
+    public void getTeacher(String fio){
+        class Person {
+            final String fio;
+            public Person (String fio) {
+                this.fio = fio;
+            }
+            String output() {
+                String[] name = fio.split(" ");
+                return "Ф: " + name[0] + "И: " + name[1] + "О: " + name[2];
+            }
+        }
+        System.out.print(new Person(fio).output());
+    }
