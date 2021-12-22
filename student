@@ -38,3 +38,25 @@ static class Student {
         }
         System.out.print(new Person(fio).output());
     }
+
+//3 задание
+public class MainActivity extends AppCompatActivity {
+
+    AppCompatActivity context = this;
+
+    @Override
+    public void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.activity_main);
+
+        Button btn = findViewById(R.id.btn);
+
+        btn.setOnClickListener(new View.OnClickListener() {
+
+            @Override
+            public void onClick(View v) {
+                Toast.makeText(context, "сообщение", Toast.LENGTH_LONG).show();
+            }
+        });
+    }
+}
