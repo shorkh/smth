@@ -1,0 +1,196 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity"
+    android:gravity="center"
+    android:orientation="vertical"
+    android:id="@+id/lt" >
+
+    <TextView
+        android:id="@+id/b1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:text="Hello"
+        android:clickable="true"
+        android:focusable="true"
+        android:textSize="30sp"
+        android:background="@color/red" />
+
+    <TextView
+        android:id="@+id/b2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:text="Hello"
+        android:clickable="true"
+        android:focusable="true"
+        android:textSize="30sp"
+        android:background="@color/oran"/>
+
+    <TextView
+        android:id="@+id/b3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:text="Hello"
+        android:clickable="true"
+        android:focusable="true"
+        android:textSize="30sp"
+        android:background="@color/yell"/>
+
+    <TextView
+        android:id="@+id/b4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:text="Hello"
+        android:clickable="true"
+        android:focusable="true"
+        android:textSize="30sp"
+        android:background="@color/green"/>
+
+    <TextView
+        android:id="@+id/b5"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:text="Hello"
+        android:clickable="true"
+        android:focusable="true"
+        android:textSize="30sp"
+        android:background="@color/blue"/>
+
+    <TextView
+        android:id="@+id/b6"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:text="Hello"
+        android:clickable="true"
+        android:focusable="true"
+        android:textSize="30sp"
+        android:background="@color/purp"/>
+
+    <TextView
+        android:id="@+id/b7"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:text="Hello"
+        android:clickable="true"
+        android:focusable="true"
+        android:textSize="30sp"
+        android:background="@color/pink"/>
+
+    <TextView
+        android:id="@+id/b8"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:text="Hello"
+        android:clickable="true"
+        android:focusable="true"
+        android:textSize="30sp"
+        android:background="@color/rose"/>
+
+    <TextView
+        android:id="@+id/b9"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:text="Hello"
+        android:clickable="true"
+        android:focusable="true"
+        android:textColor="@color/white"
+        android:textSize="30sp"
+        android:background="@color/black"/>
+
+</LinearLayout>
+
+///////////////
+public class MainActivity extends AppCompatActivity {
+
+    @Override
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.activity_main);
+
+        final LinearLayout lt = (LinearLayout) findViewById(R.id.lt);
+        TextView b1 = (TextView) findViewById(R.id.b1);
+        TextView b2 = (TextView) findViewById(R.id.b2);
+        TextView b3 = (TextView) findViewById(R.id.b3);
+        TextView b4 = (TextView) findViewById(R.id.b4);
+        TextView b5 = (TextView) findViewById(R.id.b5);
+        TextView b6 = (TextView) findViewById(R.id.b6);
+        TextView b7 = (TextView) findViewById(R.id.b7);
+        TextView b8 = (TextView) findViewById(R.id.b8);
+        TextView b9 = (TextView) findViewById(R.id.b9);
+
+        b1.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                lt.setBackgroundColor(getColor(R.color.red));
+            }
+        });
+
+        b2.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                lt.setBackgroundColor(getColor(R.color.orange));
+            }
+        });
+
+        b3.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                lt.setBackgroundColor(getColor(R.color.yellow));
+            }
+        });
+
+        b4.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                lt.setBackgroundColor(getColor(R.color.green));
+            }
+        });
+
+        b5.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                lt.setBackgroundColor(getColor(R.color.blue));
+            }
+        });
+
+        b6.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                lt.setBackgroundColor(getColor(R.color.purple));
+            }
+        });
+
+        b7.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                lt.setBackgroundColor(getColor(R.color.pink));
+            }
+        });
+
+        b8.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                lt.setBackgroundColor(getColor(R.color.white));
+            }
+        });
+
+        b9.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                lt.setBackgroundColor(getColor(R.color.black));
+            }
+        });
+    }
+}
